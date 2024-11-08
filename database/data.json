@@ -12,5 +12,12 @@
     "kelamin": true,
     "hobi": "pidato",
     "id": 2
+  },
+  {
+    "nama": "Rahmat",
+    "usia": 70,
+    "kelamin": true,
+    "hobi": "tidur",
+    "id": 3
   }
 ]
