@@ -19,5 +19,26 @@
     "kelamin": true,
     "hobi": "tidur",
     "id": 3
+  },
+  {
+    "nama": "Randi",
+    "usia": 40,
+    "kelamin": true,
+    "hobi": "Salaman",
+    "id": 4
+  },
+  {
+    "nama": "salsa",
+    "usia": 15,
+    "kelamin": false,
+    "hobi": "make up",
+    "id": 5
+  },
+  {
+    "nama": "Yanti",
+    "usia": 90,
+    "kelamin": false,
+    "hobi": "Jalan-jalan",
+    "id": 6
   }
 ]

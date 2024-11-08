@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const { manusia, pria, wanita } = require('./function');
-const { manusiaList, saveData } = require('./database/db');
+const { manusia, pria, wanita , saveData} = require('./function');
+const { manusiaList } = require('./database/db');
 
 const app = express();
 const port = parseInt(process.env.PORT) || process.argv[3] || 8080;

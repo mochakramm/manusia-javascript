@@ -10,8 +10,6 @@ if (fs.existsSync(filePath)) {
     manusiaList = JSON.parse(data);
 }
 
-const saveData = () => {
-    fs.writeFileSync(filePath, JSON.stringify(manusiaList, null, 2));
-};
 
-module.exports = { manusiaList, saveData };
+
+module.exports = { manusiaList };
