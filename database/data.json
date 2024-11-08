@@ -1,0 +1,16 @@
+[
+  {
+    "nama": "jajang",
+    "usia": 50,
+    "kelamin": true,
+    "hobi": "memancing",
+    "id": 1
+  },
+  {
+    "nama": "yani",
+    "usia": 31,
+    "kelamin": true,
+    "hobi": "pidato",
+    "id": 2
+  }
+]

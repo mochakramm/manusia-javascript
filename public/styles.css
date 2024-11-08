@@ -1,0 +1,23 @@
+/* styles.css */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-section, .result-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 45%;
+}
+
+.result-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-section li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Buat Manusia</h2>
+            <form action="/create" method="POST">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="usia">Usia:</label>
+                <input type="number" id="usia" name="usia" required>
+
+                <label for="kelamin">Kelamin:</label>
+                <select id="kelamin" name="kelamin" required>
+                    <option value="pria">Pria</option>
+                    <option value="wanita">Wanita</option>
+                </select>
+
+                <label for="hobi">Hobi:</label>
+                <input type="text" id="hobi" name="hobi" required>
+
+                <button type="submit">Buat</button>
+            </form>
+        </div>
+
+        <div class="result-section">
+            <h2>Data Manusia</h2>
+            <% if (manusiaList.length > 0) { %>
+                <ul>
+                    <% manusiaList.forEach((manusia) => { %>
+                        <li>
+                            <strong>Nama:</strong> <%= manusia.nama %><br>
+                            <strong>Usia:</strong> <%= manusia.usia %><br>
+                            <strong>Kelamin:</strong> <%= manusia.kelamin ? "Pria" : "Wanita" %><br>
+                            <strong>Hobi:</strong> <%= manusia.hobi %>
+                        </li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                <p>Tidak ada data manusia.</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

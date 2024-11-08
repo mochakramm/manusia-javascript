@@ -1,1 +1,0 @@
-datamahasiswa = {}
