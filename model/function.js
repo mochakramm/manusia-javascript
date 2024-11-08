@@ -1,4 +1,4 @@
-const { manusiaList } = require('./database/db');
+const { manusiaList } = require('../database/db');
 const fs = require('fs');
 
 class manusia {

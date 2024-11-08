@@ -40,5 +40,12 @@
     "kelamin": false,
     "hobi": "Jalan-jalan",
     "id": 6
+  },
+  {
+    "nama": "rizal",
+    "usia": 33,
+    "kelamin": true,
+    "hobi": "makan",
+    "id": 7
   }
 ]

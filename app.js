@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const { manusia, pria, wanita , saveData} = require('./function');
+const { manusia, pria, wanita , saveData} = require('./model/function');
 const { manusiaList } = require('./database/db');
 
 const app = express();
