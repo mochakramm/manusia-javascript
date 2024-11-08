@@ -47,5 +47,12 @@
     "kelamin": true,
     "hobi": "makan",
     "id": 7
+  },
+  {
+    "nama": "rezaldi",
+    "usia": 23,
+    "kelamin": true,
+    "hobi": "main bola",
+    "id": 8
   }
 ]
