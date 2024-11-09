@@ -54,5 +54,12 @@
     "kelamin": true,
     "hobi": "main bola",
     "id": 8
+  },
+  {
+    "nama": "pedro",
+    "usia": 80,
+    "kelamin": true,
+    "hobi": "Ambil Kelapoa",
+    "id": 9
   }
 ]
