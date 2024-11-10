@@ -1,20 +1,20 @@
-// controllers/manusiaController.js
+const { manusiaList } = require('../database/db');
+const { pria, wanita, saveData } = require('../models/function'); // Pastikan file function.js berada di folder models
 
-const { manusia, pria, wanita, saveData } = require('../model/function');  // Mengimpor model dan fungsi
-const { manusiaList } = require('../database/db');  // Mengimpor data manusia yang ada
-
-// Menangani GET request untuk halaman utama
-exports.index = (req, res) => {
-    // Render halaman utama (index.ejs) dengan data manusiaList
+// Controller untuk menampilkan daftar semua manusia
+const index = (req, res) => {
+    // Mengirimkan data manusiaList ke view 'index'
     res.render('index', { manusiaList });
 };
 
-// Menangani POST request untuk membuat data manusia baru
-exports.createManusia = (req, res) => {
+// Controller untuk menambahkan manusia baru
+const createManusia = (req, res) => {
     const { nama, usia, kelamin, hobi } = req.body;
-    const id = manusiaList.length + 1; // Menghitung ID untuk manusia baru
 
-    // Menentukan jenis kelamin dan membuat objek Pria atau Wanita
+    // Menentukan ID unik
+    const id = manusiaList.length > 0 ? manusiaList[manusiaList.length - 1].id + 1 : 1;
+
+    // Buat objek berdasarkan jenis kelamin (pria/wanita)
     let manusiaBaru;
     if (kelamin === 'pria') {
         manusiaBaru = new pria(nama, parseInt(usia), hobi);
@@ -22,15 +22,18 @@ exports.createManusia = (req, res) => {
         manusiaBaru = new wanita(nama, parseInt(usia), hobi);
     }
 
-    // Tambahkan ID pada objek manusia baru
+    // Tambahkan ID ke objek manusiaBaru
     manusiaBaru.id = id;
 
-    // Menambahkan manusiaBaru ke dalam array manusiaList
+    // Tambahkan manusia baru ke dalam array dan simpan ke file
     manusiaList.push(manusiaBaru);
-
-    // Menyimpan data yang telah diperbarui ke dalam file JSON
     saveData();
 
-    // Redirect ke halaman utama setelah berhasil menambah data
+    // Redirect ke halaman utama setelah menambah manusia
     res.redirect('/');
+};
+
+module.exports = {
+    index,
+    createManusia
 };

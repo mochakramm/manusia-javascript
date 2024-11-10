@@ -30,11 +30,4 @@ class Pengguna {
     }
 }
 
-// Contoh penggunaan
-const pengguna1 = new Pengguna("akram", "08123456789", "password123");
-
-// Mencoba login
-pengguna1.login("akram", "password123"); // Berhasil login
-
-// Mencoba logout
-pengguna1.logout(); // Berhasil logout
+module.exports  = {Pengguna}
